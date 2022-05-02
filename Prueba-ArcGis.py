@@ -37,6 +37,8 @@ def ScriptTool(capa):
 
     # Creo la query para obtener los features seleccionados de la capa.
     expression = """{0} in ({1})""".format(arcpy.AddFieldDelimiters(capa, 'FID'), srtFeatures)
+    
+    #Se verifica la tupla creada .... investigar mas esta nueva transformacion de los datos
     arcpy.AddMessage(f'expression: {expression}')
 
 #Ejecutando codigo de importacion de datos de otros modulos, en este caso ArcGIS
